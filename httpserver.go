@@ -8,6 +8,7 @@ import (
 )
 
 func startServer() error {
+	// This is a garbage certificate self signed certificate and not trusted.
 	cert := "-----BEGIN CERTIFICATE-----\n"
 	cert += "MIIDJzCCAg+gAwIBAgIJAKGiNftFxNRyMA0GCSqGSIb3DQEBBQUAMCoxKDAmBgNV\n"
 	cert += "BAMMH25pY29sYWFzLXBjLnRlc3QtY2hhbWJlci0xMy5sYW4wHhcNMTgxMDExMDI0\n"
@@ -28,6 +29,7 @@ func startServer() error {
 	cert += "vtv4t7q69PYQTRudSp0f0pc1ccxS2r/o6iRMQE0gZECNlyFsHXq5gX3j3A==\n"
 	cert += "-----END CERTIFICATE-----"
 
+	// This is a garbage key and not trusted.
 	key := "-----BEGIN RSA PRIVATE KEY-----\n"
 	key += "MIIEogIBAAKCAQEAqpkl8L9iR0ZnXxtTtxUD/eF75uyOFunRPmEtvnFQMIuKMbX5\n"
 	key += "TptXIJBdLuNpm+M3jUw3qkYSrBm/WkdA/FZSPAiaUwernQNYQLdRw/ltfq38L1WM\n"
