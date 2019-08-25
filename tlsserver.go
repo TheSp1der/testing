@@ -87,19 +87,19 @@ func startServer() {
 	}
 
 	srv := &http.Server{
-		Addr:              ":8443",
-		Handler:           mux,
-		TLSConfig:         cfg,
-		TLSNextProto:      make(map[string]func(*http.Server, *tls.Conn, http.Handler), 0),
+		Addr:         ":8443",
+		Handler:      mux,
+		TLSConfig:    cfg,
+		TLSNextProto: make(map[string]func(*http.Server, *tls.Conn, http.Handler), 0),
 		// time to read request headers
 		ReadHeaderTimeout: time.Duration(2 * time.Second),
 		// time from accept to full request body read
-		ReadTimeout:       time.Duration(15 * time.Second),
+		ReadTimeout: time.Duration(15 * time.Second),
 		// non tls: time from request header read to the end of the response
 		// tls:     time from accept to end of response
-		WriteTimeout:      time.Duration(10 * time.Second),
+		WriteTimeout: time.Duration(10 * time.Second),
 		// time a Keep-Alive connection will be kept idle
-		IdleTimeout:       time.Duration(120 * time.Second),
+		IdleTimeout: time.Duration(120 * time.Second),
 	}
 
 	if err := srv.ListenAndServeTLS("", ""); err != nil {
