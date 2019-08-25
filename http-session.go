@@ -1,12 +1,12 @@
 package main
 
 import (
+	"log"
 	"strconv"
 	"time"
 
 	"net/http"
 
-	"github.com/TheSp1der/goerror"
 	"github.com/gofrs/uuid"
 )
 
@@ -40,7 +40,7 @@ func webListener(port int) {
 	ws.HandleFunc("/", rootLanding)
 
 	if err := srv.ListenAndServe(); err != nil {
-		goerror.Fatal(err)
+		log.Fatal(err)
 	}
 }
 

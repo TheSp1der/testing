@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 	"strconv"
 	"time"
-
-	"github.com/TheSp1der/goerror"
 )
 
 func webRoot(resp http.ResponseWriter, req *http.Request) {
@@ -47,6 +46,6 @@ func webListener(port int) {
 	ws.HandleFunc("/uuid", webUUID)
 
 	if err := srv.ListenAndServe(); err != nil {
-		goerror.Fatal(err)
+		log.Fatal(err)
 	}
 }

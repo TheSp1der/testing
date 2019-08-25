@@ -15,10 +15,10 @@ func main() {
 
 func isIPinNet(ip string, network string) bool {
 	_, ipnet, _ := net.ParseCIDR(network)
-	
+
 	if ipnet.Contains(net.ParseIP(ip)) {
 		return true
 	}
-	
+
 	return false
 }

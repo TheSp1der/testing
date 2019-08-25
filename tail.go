@@ -2,7 +2,6 @@ package main
 
 import (
 	"bufio"
-	"errors"
 	"flag"
 	"fmt"
 	"io"
@@ -14,7 +13,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/TheSp1der/goerror"
 	"github.com/fatih/color"
 )
 
@@ -51,7 +49,7 @@ func getEnvBool(env string, def bool) bool {
 	}
 
 	if ret, err = strconv.ParseBool(val); err != nil {
-		goerror.Fatal(errors.New(val + " environment variable is not boolean"))
+		log.Fatal(val + " environment variable is not boolean")
 	}
 
 	return ret
@@ -70,7 +68,7 @@ func getEnvInt(env string, def int) int {
 	}
 
 	if ret, err = strconv.Atoi(val); err != nil {
-		goerror.Fatal(errors.New(env + " environment variable is not numeric"))
+		log.Fatal(env + " environment variable is not numeric")
 	}
 
 	return ret
@@ -93,7 +91,7 @@ func init() {
 
 	if len(filename) == 0 || filename == "" {
 		flag.PrintDefaults()
-		goerror.Fatal(errors.New("No file to follow defined."))
+		log.Fatal("No file to follow defined.")
 	}
 }
 
