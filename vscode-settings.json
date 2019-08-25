@@ -1,0 +1,44 @@
+{
+	"cSpell.language": "en-US",
+
+	"editor.tabSize": 5,
+	"editor.renderWhitespace": "boundary",
+	"editor.fontFamily": "\"Hack\", monospace",
+
+	"explorer.confirmDelete": true,
+
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 2000,
+
+	"git.autofetch": true,
+	"git.enableSmartCommit": true,
+
+	"go.autocompleteUnimportedPackages": true,
+	"go.buildOnSave":"package",
+	"go.buildFlags": "",
+	"go.coverOnTestPackage": true,
+	"go.docsTool": "gogetdoc",
+	"go.formatTool": "goimports",
+	"go.lintOnSave":"package",
+	"go.lintTool": "revive",
+	"go.testOnSave": true,
+	"go.vetOnSave":"package",
+	"[go]": {
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		}
+	},
+
+	"telemetry.enableCrashReporter": false,
+	"telemetry.enableTelemetry": false,
+
+	"workbench.colorTheme": "Material Theme Darker High Contrast",
+	"workbench.settings.editor": "json",
+
+	"comments-and-notes": [
+		"The original go-bindata has been archived. The new maintained version is located at: github.com/kevinburke/go-bindata",
+		"Hack font is located at: https://sourcefoundry.org/hack/",
+		"Debugging Documentation is located at: https://github.com/Microsoft/vscode-go/wiki/Debugging-Go-code-using-VS-Code"
+	]
+}
