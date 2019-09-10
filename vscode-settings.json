@@ -2,6 +2,7 @@
 	"cSpell.language": "en-US",
 
 	"editor.tabSize": 5,
+	"editor.wordWrap": "on",
 	"editor.renderWhitespace": "boundary",
 	"editor.fontFamily": "\"Hack\", monospace",
 
@@ -36,6 +37,15 @@
 	"workbench.colorTheme": "Material Theme Darker High Contrast",
 	"workbench.settings.editor": "json",
 
+	"comments-plugins": [
+		"Code Spell Checker",
+		"Git Graph",
+		"GitLens",
+		"Go",
+		"indent-rainbow",
+		"Material Icon Theme",
+		"Material Theme"
+	],
 	"comments-notes": [
 		"The original go-bindata has been archived. The new maintained version is located at: github.com/kevinburke/go-bindata",
 		"Hack font is located at: https://sourcefoundry.org/hack/",
